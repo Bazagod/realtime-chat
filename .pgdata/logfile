@@ -1,0 +1,26 @@
+2026-03-18 16:53:02.862 CAT [15230] LOG:  starting PostgreSQL 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit
+2026-03-18 16:53:02.863 CAT [15230] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-03-18 16:53:02.884 CAT [15230] FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5433.lock": Permission denied
+2026-03-18 16:53:02.893 CAT [15230] LOG:  database system is shut down
+2026-03-18 16:53:14.955 CAT [15651] LOG:  starting PostgreSQL 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit
+2026-03-18 16:53:14.964 CAT [15651] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-03-18 16:53:14.984 CAT [15651] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2026-03-18 16:53:15.031 CAT [15661] LOG:  database system was shut down at 2026-03-18 16:52:43 CAT
+2026-03-18 16:53:15.099 CAT [15651] LOG:  database system is ready to accept connections
+2026-03-18 16:55:46.958 CAT [16670] ERROR:  relation "ConversationMembers" does not exist at character 39
+2026-03-18 16:55:46.958 CAT [16670] STATEMENT:  SELECT cm1.conversation_id
+	      FROM "ConversationMembers" cm1
+	      JOIN "ConversationMembers" cm2 ON cm1.conversation_id = cm2.conversation_id
+	      JOIN "Conversations" c ON c.id = cm1.conversation_id
+	      WHERE cm1.user_id = 'c4c310fc-7374-42df-a58a-be482b096677'
+	        AND cm2.user_id = 'a3db3745-f4af-44f4-927d-f0cfdd82195f'
+	        AND c.type = 'private'
+	      LIMIT 1
+2026-03-18 16:58:15.117 CAT [15659] LOG:  checkpoint starting: time
+2026-03-18 16:59:56.091 CAT [15659] LOG:  checkpoint complete: wrote 991 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=100.177 s, sync=0.751 s, total=100.975 s; sync files=332, longest=0.010 s, average=0.003 s; distance=4735 kB, estimate=4735 kB; lsn=0/1993430, redo lsn=0/19933F8
+2026-03-18 17:03:15.195 CAT [15659] LOG:  checkpoint starting: time
+2026-03-18 17:03:16.076 CAT [15659] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.813 s, sync=0.030 s, total=0.882 s; sync files=9, longest=0.011 s, average=0.004 s; distance=3 kB, estimate=4261 kB; lsn=0/19941F8, redo lsn=0/19941C0
+2026-03-18 17:23:15.500 CAT [15659] LOG:  checkpoint starting: time
+2026-03-18 17:23:17.579 CAT [15659] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.962 s, sync=0.055 s, total=2.079 s; sync files=18, longest=0.009 s, average=0.004 s; distance=8 kB, estimate=3836 kB; lsn=0/1996440, redo lsn=0/1996408
+2026-03-18 17:28:15.684 CAT [15659] LOG:  checkpoint starting: time
+2026-03-18 17:28:16.556 CAT [15659] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.771 s, sync=0.038 s, total=0.872 s; sync files=8, longest=0.011 s, average=0.005 s; distance=8 kB, estimate=3453 kB; lsn=0/19985E8, redo lsn=0/19985B0
