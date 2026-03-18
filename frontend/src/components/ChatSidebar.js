@@ -204,6 +204,11 @@ export default function ChatSidebar({
           })
         )}
       </div>
+
+      {/* Signature */}
+      <div className="p-3 border-t border-dark-700/50 text-center">
+        <span className="text-[10px] text-dark-500">Conçu par Bazagod</span>
+      </div>
     </aside>
   );
 }
